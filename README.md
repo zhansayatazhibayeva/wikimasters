@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Wikimasters
 
-## Getting Started
+Wikimasters is a full-stack content management platform built with Next.js (App Router), focused on authenticated content creation, role-based access control, and scalable API architecture.
 
-First, run the development server:
+Live Demo:
+https://wikimasters-4u0s31ps9-zhansayas-projects-deb66b05.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Core Functionality
+Implemented custom session-based authentication using cookies (without external providers)
+Designed role-based access control (RBAC) for protected routes and admin features
+Built full CRUD system for articles with server-side API routes
+Integrated AI-powered article summarization
+Developed image upload pipeline using Vercel Blob storage
+Ensured client/server separation using Next.js App Router patterns
+Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js (App Router)
+React
+Tailwind CSS
+shadcn/ui
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Backend
 
-## Learn More
+Next.js API routes (server-side logic)
+REST API architecture
 
-To learn more about Next.js, take a look at the following resources:
+Database
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+PostgreSQL (Neon)
+Drizzle ORM
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Infrastructure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel (deployment)
+Vercel Blob (file storage)
+Architecture Highlights
+Clear separation between server components and client components
+Centralized API layer for data operations
+Session validation on protected routes
+Structured database schema with relational design
+Handling of async server logic (cookies, headers, auth state)
+Key Challenges Solved
+Debugged authentication issues in production (cookies, domain, secure flags)
+Configured Neon database connections in serverless environment
+Managed environment variables across local and production setups
+Resolved client/server boundary issues in Next.js App Router
